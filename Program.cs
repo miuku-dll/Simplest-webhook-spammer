@@ -16,6 +16,12 @@ var Message = Console.ReadLine();
 Console.Write("Profile Pic: ");
 var Pfp = Console.ReadLine();
 
+Console.Write("How many times to send: ");
+var Times = Console.ReadLine();
+int RealTimes = Convert.ToInt32(Times);
+
+
+
 /// String str = $"{FileName}.{FileType}";
 
 try
@@ -38,7 +44,11 @@ static void sendDiscordWebhook(string URL, string profilepic, string username, s
 
 try
 {
+    for (int i = 0; i < RealTimes; i++) // Probably not the fastest way to loop stuff but works fine 🤷
+    {
+        Console.WriteLine(i);
         sendDiscordWebhook(Webhook, Pfp, Name, Message);
+    }
 }
 catch
 {
