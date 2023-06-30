@@ -1,39 +1,46 @@
 using System;
+using System.Collections.Specialized;
 using System.IO;
 using System.Net;
 
-Console.Write("File Name: ");
-var FileName = Console.ReadLine();
 
-Console.Write("Type of file: ");
-var FileType = Console.ReadLine();
+Console.Write("Webhook: ");
+var Webhook = Console.ReadLine();
 
-String str = $"{FileName}.{FileType}";
+Console.Write("Name: ");
+var Name = Console.ReadLine();
 
-Console.Write("File Text: ");
-var FileText = Console.ReadLine();
+Console.Write("Message Text: ");
+var Message = Console.ReadLine();
 
-try
-{
+Console.Write("Profile Pic: ");
+var Pfp = Console.ReadLine();
 
-    using (StreamWriter writer = File.CreateText(str))
-    {
-        writer.WriteLine(FileText);
-    }
-}
-catch
-{
-    Console.WriteLine("Error Code 101");
-}
+/// String str = $"{FileName}.{FileType}";
 
 try
 {
-    Console.WriteLine("Done!");
-    Thread.Sleep(1000);
-    Environment.Exit(0);
+    Console.WriteLine(Name + ": " + Message);
 }
 catch
 {
-    Console.WriteLine("Error Code 404 (No reason this would fail :D)");
+    Console.WriteLine("How did u fail this???");
 }
 
+static void sendDiscordWebhook(string URL, string profilepic, string username, string message)
+{
+    NameValueCollection discordValues = new NameValueCollection();
+    discordValues.Add("username", username);
+    discordValues.Add("avatar_url", profilepic);
+    discordValues.Add("content", message);
+    new WebClient().UploadValues(URL, discordValues);
+}
+
+try
+{
+        sendDiscordWebhook(Webhook, Pfp, Name, Message);
+}
+catch
+{
+     Console.WriteLine("Just how..???");
+}
