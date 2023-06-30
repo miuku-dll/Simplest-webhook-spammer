@@ -46,7 +46,7 @@ try
 {
     for (int i = 0; i < RealTimes; i++) // Probably not the fastest way to loop stuff but works fine 🤷
     {
-        Console.WriteLine(i);
+        Console.WriteLine(i); // Im stupid so i like to see how many messages ive sent
         sendDiscordWebhook(Webhook, Pfp, Name, Message);
         // sendDiscordWebhook(Webhook, Pfp, Name, (Message + i)); <-- If you want to include the number of the message
     }
