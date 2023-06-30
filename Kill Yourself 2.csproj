@@ -6,6 +6,9 @@
     <RootNamespace>Kill_Yourself_2</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>KYS</Title>
+    <PackageIcon>KYS_sin_fi_web_png-2949684921.png</PackageIcon>
+    <RepositoryUrl>https://github.com/yurkyu/Simplest-webhook-spammer</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

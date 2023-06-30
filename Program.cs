@@ -48,6 +48,7 @@ try
     {
         Console.WriteLine(i);
         sendDiscordWebhook(Webhook, Pfp, Name, Message);
+        // sendDiscordWebhook(Webhook, Pfp, Name, (Message + i)); <-- If you want to include the number of the message
     }
 }
 catch
