@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kill Yourself 2", "Kill Yourself 2.csproj", "{D943CD87-7DE2-45C7-AA2E-E7BC2C400BDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D943CD87-7DE2-45C7-AA2E-E7BC2C400BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D943CD87-7DE2-45C7-AA2E-E7BC2C400BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D943CD87-7DE2-45C7-AA2E-E7BC2C400BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D943CD87-7DE2-45C7-AA2E-E7BC2C400BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACA06E6E-7998-4435-9F88-F887BED9750A}
+	EndGlobalSection
+EndGlobal
