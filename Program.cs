@@ -5,9 +5,18 @@ using System.Net;
 
 class Program
 {
-    static void Main(string[] args)
+
+    public static void error101() // Easier Re-using
+    {
+        Console.WriteLine("Error, Restarting...");
+        Thread.Sleep(3000);
+        Console.Clear();
+    }
+
+    static void Main(string[] args) // The code that spams the webhook
     {
     Start:
+
         Console.Write("Webhook: ");
         var Webhook = Console.ReadLine();
 
@@ -26,7 +35,7 @@ class Program
 
 
 
-        /// String str = $"{FileName}.{FileType}";
+        // String str = $"{FileName}.{FileType}";
 
         try
         {
@@ -34,7 +43,8 @@ class Program
         }
         catch
         {
-            Console.WriteLine("How did u fail this???");
+            error101();
+            goto Start;
         }
 
         static void sendDiscordWebhook(string URL, string profilepic, string username, string message)
@@ -57,7 +67,8 @@ class Program
         }
         catch
         {
-            Console.WriteLine("Just how..???");
+            error101();
+            goto Start;
         }
 
         try
@@ -69,7 +80,8 @@ class Program
         }
         catch
         {
-            Console.WriteLine("No idea what went wrong...");
+            error101();
+            goto Start;
         }
     }
 }
